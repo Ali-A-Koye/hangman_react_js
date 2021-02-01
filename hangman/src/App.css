@@ -106,3 +106,13 @@ p{
   top: 7%;
   left: 10%;
 }
+
+#img{
+  width: 450px;
+  height: 450px;
+
+}
+
+#PlayAgain {
+  line-height: 1vh;
+}

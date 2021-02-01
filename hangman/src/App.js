@@ -7,7 +7,7 @@ import './App.css';
 
 
 function App() {
-  const [isStarted, setIsStarted] = useState(true);
+  const [isStarted, setIsStarted] = useState(false);
 
   function changeState() {
     setIsStarted(true);
