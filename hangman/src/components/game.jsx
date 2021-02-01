@@ -4,7 +4,6 @@ import GameOver from './GameOver';
 
 function Game() {
 
-
     const [isEnded, setIsEnded] = useState(false);
 
     function endGame() {

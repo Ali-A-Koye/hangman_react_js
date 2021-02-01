@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import UnderScored from './underScoredLetters';
-//import axios from 'axios'
-
-
-// const nameGenerator = async () => {
-//     let name = await axios.get('https://random-word-api.herokuapp.com/word?number=1');
-//     name = name.data[0];
-//     return name;
-// }
+import axios from 'axios'
+const nameGenerator = async () => {
+    let name = await axios.get('https://random-word-api.herokuapp.com/word?number=1');
+    return name.data[0];
+}
 
 function Letters(props) {
+
     const letters = []
-    const [pickedName, setPickedName] = useState("ALIA");
+    const [pickedName, setPickedName] = useState("SHOULDbeDYNAMIC");
     const HiddenName = (pickedName.split("").map(el => "_").join(""));
     const [NameGenerated, SetNameGenerated] = useState(HiddenName);
     let [Counter, SetCounter] = useState(10);
+
 
     for (let i = 'a'.charCodeAt(0); i <= 'z'.charCodeAt(0); i++) {
         letters.push(String.fromCharCode(i));
@@ -47,6 +46,7 @@ function Letters(props) {
 
         </div>
     );
+
 }
 
 export default Letters;

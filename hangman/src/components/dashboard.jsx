@@ -15,6 +15,10 @@ const activateSawAndSound = async () => {
 
 function upperPart(props) {
 
+
+    function cancelGame(el) {
+        alert("Joking xD , There is No Cancel!")
+    }
     return (
         <div className="upperPart">
             <h1>HangMan Game</h1>
@@ -22,7 +26,7 @@ function upperPart(props) {
             <p>Press Start to Start the Game or Cancel</p>
 
             <button class="btn" onClick={props.startGame}> Start the Game </button>
-            <button class="btn" onClick={props.startGame}> Cancel </button>
+            <button class="btn" onClick={cancelGame} > Cancel </button>
             <button class="btn" onClick={activateSawAndSound}> Help </button>
         </div>
     );
