@@ -12,6 +12,7 @@ function App() {
   function changeState() {
     setIsStarted(true);
   }
+
   let gameStarted;
   if (isStarted) {
     gameStarted = <Game />;

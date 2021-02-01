@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dashboard from './dashboard';
+import App from '../App';
 
 let sad = new Audio("./sad.mp3");
 
@@ -10,13 +10,14 @@ function GameOver(props) {
 
     const [backToHome, setBackToHome] = useState(false);
     function changeState() {
+
         setBackToHome(true);
     }
     let componenet;
 
     if (backToHome) {
         sad.pause();
-        componenet = <Dashboard />
+        componenet = <App reset={true} />
     } else {
         sad.play();
         componenet = <div>
