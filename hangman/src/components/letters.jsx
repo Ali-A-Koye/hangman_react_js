@@ -14,6 +14,7 @@ function Letters(props) {
     const [pickedName, setPickedName] = useState("ALIA");
     const HiddenName = (pickedName.split("").map(el => "_").join(""));
     const [NameGenerated, SetNameGenerated] = useState(HiddenName);
+    let [Counter, SetCounter] = useState(10);
 
     for (let i = 'a'.charCodeAt(0); i <= 'z'.charCodeAt(0); i++) {
         letters.push(String.fromCharCode(i));
@@ -27,12 +28,17 @@ function Letters(props) {
             newString[index] = pickedName[index];
             SetNameGenerated(newString.join(""))
         } else {
-            alert("error");
+            if (Counter === 1) {
+                props.endGame();
+            } else {
+                SetCounter(Counter - 1);
+            }
         }
 
     }
     return (
         <div>
+            <h1 id="counter">{Counter}</h1>
             {letters.map((value, index) => {
                 return <button key={index}
                     onClick={((e) => clickedLetter(e, value.toUpperCase()))} class="letters">{value.toUpperCase()}</button>
