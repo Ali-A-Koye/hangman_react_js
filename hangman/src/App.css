@@ -116,3 +116,7 @@ p{
 #PlayAgain {
   line-height: 1vh;
 }
+
+.HintBtn{
+  margin-top: 5%;
+}
