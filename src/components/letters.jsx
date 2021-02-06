@@ -6,7 +6,7 @@ import axios from 'axios'
 function Letters(props) {
 
     const letters = []
-    const [pickedName, setPickedName] = useState("ALIAKOYE");
+    const [pickedName, setPickedName] = useState("RECODED");
     let [Counter, SetCounter] = useState(10);
 
     const HiddenName = (pickedName.split("").map(el => "_").join(""));
